@@ -1,0 +1,16 @@
+def chk_for_duplicate() :
+    if each not in tlist :                 
+        tlist.add(each)
+        print(f"{each}+{i}={c}triplet")
+a = (1,2,3,4,5,6,7)
+tlist = set()
+for each in a :
+    for i in a :
+        if i != each :
+            c = each + i
+            # for x in a :
+            #     if x == c :
+            if c in a :
+                chk_for_duplicate()                   
+
+
