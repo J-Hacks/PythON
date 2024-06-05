@@ -1,0 +1,14 @@
+<VirtualHost *:80>
+    ServerName yourdomain.com
+    WSGIDaemonProcess flaskapp threads=5
+    WSGIScriptAlias / /path/to/your/app/wsgi.py
+
+    <Directory /path/to/your/app>
+        Require all granted
+    </Directory>
+
+    Alias /static /path/to/your/app/static
+    <Directory /path/to/your/app/static>
+        Require all granted
+    </Directory>
+</VirtualHost>
