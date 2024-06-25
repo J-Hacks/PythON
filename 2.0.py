@@ -4,7 +4,7 @@ import os
 # Define the regular expression pattern to extract changeset number and items
 pattern = r'Changeset:(\s+\d*).*?Date:(.*?\n).*?Comment:(.+?)(?:\n\s*\n|\Z).*?Items:(.+?)(?:\n\s*\n|\Z)'
 # Directory path containing the text files and where the CSV files will be saved
-directory_path = r'C:\Users\jeejandra.a\Desktop\NVKIDS_TFS\NVKIDS_OCTOBER_03_TO_08\NVKIDS_OCTOBER_03_TO_08'
+directory_path = r'\path'
 # Iterate through all text files in the directory
 for filename in os.listdir(directory_path):
     if filename.endswith('.txt'):
