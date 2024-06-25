@@ -1,5 +1,4 @@
 import os
- 
 def print_files_recursive(directory):
     for root, dirs, files in os.walk(directory):
         for file in files:
