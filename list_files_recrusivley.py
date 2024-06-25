@@ -7,6 +7,5 @@ def print_files_recursive(directory):
             file_name = os.path.relpath(os.path.join(root, file), directory)
             print(file_name)
  
-# Example usage
 directory = "/path/to/your/directory"
 print_files_recursive(directory)
