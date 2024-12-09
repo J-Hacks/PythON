@@ -13,7 +13,7 @@ headers = {
 
 # List of all your project names
 PROJECT_NAMES = ["project1", "project2", "project4"]  
-one_hour_ago = (datetime.utcnow() - timedelta(hours=12)).isoformat()
+twelve_hour_ago = (datetime.utcnow() - timedelta(hours=12)).isoformat()
 
 def get_project_id_by_name(project_name):
     params = {"search": project_name}
@@ -67,7 +67,7 @@ def fetch_and_display_pipelines(project_name):
     project_id = get_project_id_by_name(project_name)
     if project_id:
         for status in statuses:
-            pipelines = get_pipelines_by_status_and_time(project_id, status, one_hour_ago)
+            pipelines = get_pipelines_by_status_and_time(project_id, status, twelve_hour_ago)
             display_pipelines(pipelines, status, project_name)
     else:
         print(f"Project '{project_name}' not found.")
